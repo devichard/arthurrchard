@@ -48,9 +48,9 @@ const Header = () => {
               rounded-lg shadow-xl 
             "
             onClick={handleContato}
-          >
-            Fale com um especialista
-          </button>
+          > 
+            Fale com um especialista 
+          </button> //
         </nav>
       </div>
     </header>

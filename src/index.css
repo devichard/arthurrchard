@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-white
+    relative font-sans h-screen
+    overflow-x-hidden 
+  }
+}
+
+@keyframes flutuar {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-25px);
+  }
+}
+
+.animate-float {
+  animation: flutuar 6s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(76, 167, 36, 0.4); 
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(76, 167, 36, 1); 
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(76, 167, 36, 0.4);
+    }
+}
+
+.animate-button-glow {
+    transition: box-shadow 0.6s ease-in-out;
+    animation: pulseGlow 4s infinite ease-in-out;
+}
+
+.icon-fix::before {
+    content: attr(class);
+    font-family: 'boxicons';
+}
+
+.custom-boxicon-fix {
+    font-family: 'boxicons' !important; 
+    font-weight: normal; 
+    font-style: normal; 
+    line-height: 1; 
+    display: inline-block; 
+}
+
+@keyframes marqueeMove {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-90%);
+  }
+}
+
+.animate-marquee-move {
+  animation: marqueeMove 30s linear infinite; 
+}
